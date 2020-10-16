@@ -1,5 +1,3 @@
-//Heey dit is een test
-
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -9,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 // Connect to the database
 mongoose
   .connect(
-    "mongodb+srv://dev:bootcamp@cluster0.cdtkq.azure.mongodb.net/mymovies?retryWrites=true&w=majority",
+    "mongodb+srv://dbEvy:dbAdmin@cluster0.iafbf.azure.mongodb.net/FirstTryDB?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("DB Connected"))
