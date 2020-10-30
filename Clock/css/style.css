@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+i {
+    font-size: 15vh;
+    justify-self: center;
+}
+
+.empty {
+    height: 20vh;
+}
+
+.Clock {
+    grid-area: Clock;
+    align-self: end;
+}
+
+.ClockName {
+    grid-area: ClockName;
+}
+
+.TimeAndDate {
+    grid-area: TimeAndDate;
+}
+
+.Image {
+    grid-area: Image;
+    height: 20vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "Clock"
+    "ClockName"
+    "TimeAndDate"
+    "Image";    
+    justify-items: center;
+}
+
