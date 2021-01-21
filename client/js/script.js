@@ -6,9 +6,9 @@ const init = () => {
 
     // do something based on button ID
     switch (this.id) {
-      case "people":
+      case "projects":
         // do something
-        loadPeopleData();
+        loadProjectsData();
         break;
       case "home":
       case "me":

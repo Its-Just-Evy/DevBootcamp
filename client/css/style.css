@@ -57,14 +57,14 @@ footer > nav > button.active {
   font-size: 3em;
 }
 
-article.person {
+article.project {
   width: 96vw;
   border: 1px dashed lightslategrey;
   padding: 0.5em;
   margin: 1em auto;
 }
 
-article.person > .name {
+article.project > .name {
   font-size: 2em;
   font-weight: bold;
   color: lightslategrey;
@@ -72,19 +72,19 @@ article.person > .name {
   float: left;
 }
 
-article.person > .operations {
+article.project > .operations {
   float: right;
 }
 
-article.person > .operations > .fa::before {
+article.project > .operations > .fa::before {
   font-size: initial;
 }
 
-article.person > .movies {
+article.project > .movies {
   clear: both;
 }
 
-article.person > .movies > span {
+article.project > .movies > span {
   display: inline-block;
   padding: 0 1em;
   margin: 0 1em;

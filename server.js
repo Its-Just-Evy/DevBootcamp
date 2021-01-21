@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 // Connect to the database
 mongoose
   .connect(
-    "mongodb+srv://dbEvy:dbAdmin@cluster0.iafbf.azure.mongodb.net/FirstTryDB?retryWrites=true&w=majority",
+    "mongodb+srv://dbEvy:dbAdmin@cluster0.iafbf.azure.mongodb.net/Portfolio?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("DB Connected"))
@@ -18,7 +18,7 @@ app.use(bodyParser.json()); // for parsing application/json
 // app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // Load Routes
-app.use("/api/people", require("./routes/api/people"));
+app.use("/api/projects", require("./routes/api/projects"));
 app.use("/api/movies", require("./routes/api/movies"));
 
 // Enable CORS (https://enable-cors.org/server.html)

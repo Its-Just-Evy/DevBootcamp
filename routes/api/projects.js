@@ -2,44 +2,44 @@ const express = require("express");
 const router = express.Router();
 
 // Load our model
-const Person = require("../../models/People");
+const Project = require("../../models/Projects");
 
 // Handle API routes
 router.get("/", (req, res) => {
-  Person.find()
+  Project.find()
     .populate("movies")
     .then((results) => res.json(results));
 });
 
 // Retrieve person by id
 router.get("/:id", (req, res) => {
-  Person.findById(req.params.id)
+  Project.findById(req.params.id)
     .populate("movies")
     .then((result) => res.json(result));
 });
 
 // Add person
 router.post("/", (req, res) => {
-  let person = new Person({
+  let project = new Project({
     ...req.body,
   });
 
-  person
+  project
     .save()
-    .then((newPerson) =>
-      res.json({ status: "success", person: newPerson })
+    .then((newProject) =>
+      res.json({ status: "success", project: newProject })
     );
 });
 
 router.put("/:id", (req, res) => {
-  Person.findByIdAndUpdate(req.params.id, {
+  Project.findByIdAndUpdate(req.params.id, {
     ...req.body,
   }).then((result) => res.json(result));
 });
 
 // Delete person by id
 router.delete("/:id", (req, res) => {
-  Person.findByIdAndRemove(req.params.id).then((result) =>
+  Project.findByIdAndRemove(req.params.id).then((result) =>
     res.json(result)
   );
 });

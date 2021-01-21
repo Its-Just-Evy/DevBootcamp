@@ -1,24 +1,19 @@
-const loadPeopleData = () => {
-  console.log("Loading people data...");
+const loadProjectsData = () => {
+  console.log("Loading projects data...");
 
-  fetch("/api/people")
+  fetch("/api/projects")
     .then((response) => response.json())
-    .then((people) => {
+    .then((projects) => {
       // let's get the people into the page
       const viewElement = document.getElementById("content");
       let viewContent = "";
-      for (person of people) {
+      for (project of projects) {
         // ugly way of creating DOM content (do better!)
-        viewContent += `<article class="person" id="${person._id}">`;
-        viewContent += `<div class="name">${person.name}</div>`;
+        viewContent += `<article class="project" id="${project._id}">`;
+        viewContent += `<div class="name">${project.name}</div>`;
         viewContent += `<div class="operations"><button class="btn-crud fa fa-trash delete"></button></div>`;
-        viewContent += `<div class="age">${person.age}</div>`;
-        viewContent += `<div class="hometown">${person.hometown}</div>`;
-        viewContent += `<div class="movies">`;
-        // list movies this person likes
-        for (movie of person.movies) {
-          viewContent += `<span class="movie">${movie.title} (${movie.year})</span>`;
-        }
+        viewContent += `<div class="introtext">${project.introtext}</div>`;
+        viewContent += `<div class="text">${project.text}</div>`;
         viewContent += `</div>`;
         viewContent += "</article>";
       }
@@ -34,10 +29,10 @@ const loadPeopleData = () => {
 
         console.log(targetArticle.id);
 
-        fetch(`/api/people/${targetArticle.id}`, { method: "DELETE" })
+        fetch(`/api/projects/${targetArticle.id}`, { method: "DELETE" })
           .then((response) => response.json())
-          .then((person) => {
-            console.log(`${person.name} just got eliminated`);
+          .then((project) => {
+            console.log(`${project.name} just got eliminated`);
           });
       }
 

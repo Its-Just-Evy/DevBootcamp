@@ -6,16 +6,16 @@
   },
   "item": [
     {
-      "name": "Get people",
+      "name": "Get projects",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:5000/api/people",
+          "raw": "http://localhost:5000/api/projects",
           "protocol": "http",
           "host": ["localhost"],
           "port": "5000",
-          "path": ["api", "people"]
+          "path": ["api", "projects"]
         }
       },
       "response": []
@@ -36,22 +36,22 @@
       "response": []
     },
     {
-      "name": "Get people by id",
+      "name": "Get projects by id",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:5000/api/people/1",
+          "raw": "http://localhost:5000/api/projects/1",
           "protocol": "http",
           "host": ["localhost"],
           "port": "3000",
-          "path": ["api", "people", "1"]
+          "path": ["api", "projects", "1"]
         }
       },
       "response": []
     },
     {
-      "name": "Update people by id",
+      "name": "Update projects by id",
       "request": {
         "method": "PUT",
         "header": [],
@@ -69,13 +69,13 @@
           "protocol": "http",
           "host": ["localhost"],
           "port": "5000",
-          "path": ["api", "people", "5f7f1644f93ee606b70a9926"]
+          "path": ["api", "projects", "5f7f1644f93ee606b70a9926"]
         }
       },
       "response": []
     },
     {
-      "name": "Delete people by id",
+      "name": "Delete projects by id",
       "request": {
         "method": "DELETE",
         "header": [],
@@ -84,19 +84,19 @@
           "protocol": "http",
           "host": ["localhost"],
           "port": "5000",
-          "path": ["api", "people", "5e4fba795248549c24d12146"]
+          "path": ["api", "projects", "5e4fba795248549c24d12146"]
         }
       },
       "response": []
     },
     {
-      "name": "Post people",
+      "name": "Post projects",
       "request": {
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\" : \"John\",\n    \"age\" : \"27\",\n    \"hometown\" : \"Liverpool\"\n}",
+          "raw": "{\n    \"name\" : \"Nice\",\n    \"introtext\" : \"Awsome\",\n    \"text\" : \"Hope\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -104,11 +104,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:5000/api/people",
+          "raw": "http://localhost:5000/api/projects",
           "protocol": "http",
           "host": ["localhost"],
           "port": "5000",
-          "path": ["api", "people"]
+          "path": ["api", "projects"]
         }
       },
       "response": []
